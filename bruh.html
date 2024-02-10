@@ -2,12 +2,15 @@
 <head>
 </head>
 <body>
-<button onclick="openGame()">Open Game</button>
+<button onclick="openGame()">Open Proxy</button>
+<button onclick="openIframe()">Open Iframe</button>
 <script>
+function openIframe() {
+window.open("https://dwyercanvas.github.io/e.html", '_blank');
+}
+
 function openGame() {
-  window.location.replace(
-  "https://interstellar-sigma-six.vercel.app/",
-);
+window.open("https://interstellar-sigma-six.vercel.app/", '_blank');
   var win = window.open();
   var url = "https://interstellar-sigma-six.vercel.app/";
   
