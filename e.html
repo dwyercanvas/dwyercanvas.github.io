@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+iframe {
+    display: block;
+    margin-top: 26px;
+    background: #000;
+    border: none;
+    height: calc(100vh - 26px);
+    width: 100%;
+    overflow: hidden;
+}
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 26px;
+      background-color: #dbd9d9;
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      z-index: 999; /* Ensure the top bar is above other elements */
+    }
+
+    .top-bar svg {
+      width: 1em;
+      height: 1em;
+      margin-right: 20px;
+    }
+
+    .top-bar span {
+      font-size: 14px;
+      font-family: Arial;
+      margin-left: 15px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <svg xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px;" viewBox="0 0 24 24">
+          <path fill="currentColor" d="m4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="transform: scaleX(-1);">
+          <path fill="#a6a0a0" d="m4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15">
+          <path fill="black" d="m7.5.5l.354-.354a.5.5 0 0 0-.708 0zm-6 6l-.354-.354L1 6.293V6.5zm12 0h.5v-.207l-.146-.147zm.354-.354l-6-6l-.708.708l6 6zm-6.708-6l-6 6l.708.708l6-6zM14 13.5v-7h-1v7zm-13-7v7h1v-7zM2.5 15h10v-1h-10zM13 13.5a.5.5 0 0 1-.5.5v1a1.5 1.5 0 0 0 1.5-1.5zm-12 0A1.5 1.5 0 0 0 2.5 15v-1a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="margin-right: 10px;">
+          <path fill="black" d="M18.258 3.508a.75.75 0 0 1 .463.693v4.243a.75.75 0 0 1-.75.75h-4.243a.75.75 0 0 1-.53-1.28L14.8 6.31a7.25 7.25 0 1 0 4.393 5.783a.75.75 0 0 1 1.488-.187A8.75 8.75 0 1 1 15.93 5.18l1.51-1.51a.75.75 0 0 1 .817-.162"/>
+        </svg>
+        <span>Restart Session</span>
+      </div>
+    <iframe src=""></iframe>
+
+    <script>
+        // Prompt user for URL
+        var url = prompt("Please enter the URL:");
+
+        // Set iframe source with the entered URL
+        if (url) {
+            document.querySelector('iframe').src = url;
+        }
+    </script>
+</body>
+</html>
